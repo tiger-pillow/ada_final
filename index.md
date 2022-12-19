@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+A walk through the ages
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
