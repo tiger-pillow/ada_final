@@ -1,5 +1,7 @@
 ---
 layout: default
+title: Movie Through the Decades
+description: a peak into how technology and historical events change the film industry
 ---
 
 ### Drama is life with the dull bits cut out
