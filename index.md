@@ -58,20 +58,32 @@ Three things influenced mostly by technology -->
 
 <br><br><br>
 
-## Plots reveal the impact of historical events on film topics.
+## **Historical Events, Similarity and Latency**
 <!-- TODO: a bit of methodology  -->
+Part 1: 
+1. doc2vec model
+2. explain how we got the events, and event summary
+3. explain lemma and stop words 
 
-- doc2vec model, how you choose the events, 
-- table of the regression 
-1. Similarity btwen events and plots summary, we present the significant 
-- apollo
-- 
-2. deduce which one event out of the 25 events has the most impact
-
-1. 
+Part 2: 
+- table of the regression, t test for an overview 
+- hand pick a few events, both good and bad 
+- show the latency graph, and justify to the best extent
 
 
-## Perception of historical events
- - overall historical sentiment 
- - look at 25 events
- - Russian
+## **How are historical events and concepts perceived through movies ?**
+
+<img src= './sentiment_baseline.png' width="50%" height="50%" style="float: left; margin-right:10px" />
+### Our perceptions of past events change as time goes on. New research and reflections might shine light on events previously considered negative. By doing a sentiment analysis on the plots, we can see how events and concepts are viewed differently over time. Here, we can see that globally movie plots have been generally negative, and becoming slightly more negative over time. 
+
+### A closer look at a historical events or key words reveal how their representations change in movies. 
+<img src= './berlin_wall.png' width="49%" height="49%" />
+<img src= './berlin_fall.png' width="49%" height="49%"  />
+
+### When we select movie plots most relevant to <a href="https://en.wikipedia.org/wiki/Berlin_Wall">Berlin Wall (General)</a> and <a href="https://en.wikipedia.org/wiki/Fall_of_the_Berlin_Wall">Fall of Berlin Wall</a>, we see a difference in the perception of the two events. Although both events are perceived more positively over time, _the Fall Of Berlin Wall_ has a more positive sentiment score and higher slope, corresponding to the more postive perception of the event. 
+
+<br><br>
+
+## berlin wall
+## Nelson Mandela and Vietnam War 
+## Apollo 11 and Apollo 13 
