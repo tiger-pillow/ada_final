@@ -54,13 +54,24 @@ Three things influenced mostly by technology -->
 
 <img src= './runtime.png' width="40%" height="40%" style = "float: right; margin-left:20px"/>
 
-### 4. Nowadays, we are used to the idea of going to see "one movie". But did you know that many short films used to be presented together in theatres? Since 1888, average runtime has increased, and stablized around 100 minutes.
- Thus the term "feature-length", which refered to the promoted one.  As Hitchcock said "The length of a film should be directly related to the endurance of the human bladder". 
+### 4. Nowadays, we are used to the idea of going to see "one movie". But did you know that many short films used to be presented together in theatres? Since 1888, average runtime has increased, and stablized around 100 minutes.Thus the term "feature-length", which refered to the promoted one.  As Hitchcock said "The length of a film should be directly related to the endurance of the human bladder". 
+
 <br><br><br>
 
 ## Plots reveal the impact of historical events on film topics.
 <!-- TODO: a bit of methodology  -->
 
+- doc2vec model, how you choose the events, 
+- table of the regression 
+1. Similarity btwen events and plots summary, we present the significant 
+- apollo
+- 
+2. deduce which one event out of the 25 events has the most impact
+
+1. 
 
 
 ## Perception of historical events
+ - overall historical sentiment 
+ - look at 25 events
+ - Russian
