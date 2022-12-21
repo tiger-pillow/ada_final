@@ -54,7 +54,8 @@ Three things influenced mostly by technology -->
 
 <img src= './runtime.png' width="40%" height="40%" style = "float: right; margin-left:20px"/>
 
-### 4. Nowadays, we are used to the idea of going to see "one movie", but did you know that many short films used to be presented together in theatres? Thus the term "feature-length", which refered to the promoted one. Since 1888, average runtime has increased, and stablized around 100 minutes. As Hitchcock said "The length of a film should be directly related to the endurance of the human bladder". 
+### 4. Nowadays, we are used to the idea of going to see "one movie". But did you know that many short films used to be presented together in theatres? Since 1888, average runtime has increased, and stablized around 100 minutes.
+ Thus the term "feature-length", which refered to the promoted one.  As Hitchcock said "The length of a film should be directly related to the endurance of the human bladder". 
 <br><br><br>
 
 ## Plots reveal the impact of historical events on film topics.
