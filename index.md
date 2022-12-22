@@ -89,12 +89,20 @@ have limited data, it could be the case that some events take hold and creates a
 ### A closer look at a historical events or key words reveal how their representations change in movies. 
 <img src= './Berlin_combined.png'/>
 
-### When we select movie plots most similar (similarity score > 0.8) to <a href="https://en.wikipedia.org/wiki/Berlin_Wall">Berlin Wall (General)</a> and <a href="https://en.wikipedia.org/wiki/Fall_of_the_Berlin_Wall">Fall of Berlin Wall</a>, we see that the two events are perceived differently. Although both events are perceived as negative, _the Fall Of Berlin Wall_ has a more positive sentiment score and a faster increasing slope, corresponding to the more postive perception of the event in Western cultures. 
+### When we select movie plots most similar (similarity score > 0.8) to <a href="https://en.wikipedia.org/wiki/Berlin_Wall">Berlin Wall (General)</a> and <a href="https://en.wikipedia.org/wiki/Fall_of_the_Berlin_Wall">Fall of Berlin Wall</a>, we see that the two events are perceived differently. Although both events are perceived as negative, _the Fall Of Berlin Wall_ has a more positive sentiment score and a faster increasing slope. This might be caused by the more postive perception of Berlin Wall's Fall in Western cultures. 
 
 <img src= './three_wars.png' width="150%" height="150%"/>
 
-### Here we compare the sentiments towards two wars with many similar characteristics. Both the _Korean War_ and the _Vietnam War_ started in the 1950s, with the United States combatting overseas in Asia against communist forces. Both wars ended with unsatisfactory results from the U.S. perspective. The Korean War ended with an armistice, and the Vietnam war ended with a U.S. defeat. It's reasonable that the two wars exhibit similar negative sentiments. This particularly obvious when compared to the Falklands War between Argentina and the U.K. in the 1980s, which also had <a href="https://en.wikipedia.org/wiki/Cultural_impact_of_the_Falklands_War">a cultural impact. </a> 
+### Here we compare the sentiments towards two wars with many similar characteristics. Both the <a href="https://en.wikipedia.org/wiki/Korean_War">Korean War</a> and the <a href="https://en.wikipedia.org/wiki/Vietnam_War">Vietnam War</a> started in the 1950s, with the United States combatting overseas in Asia against communist forces. Both wars ended with unsatisfactory results from the U.S. perspective. The Korean War ended with an armistice, and the Vietnam war ended with a U.S. defeat. It's reasonable that the two wars exhibit similar negative sentiments. This particularly obvious when compared to the Falklands War between Argentina and the U.K. in the 1980s, which also had <a href="https://en.wikipedia.org/wiki/Cultural_impact_of_the_Falklands_War">a cultural impact. </a> 
 
-<br><br>
+<img src= './apollo11.png' width="49%" height="49%"/>
+<img src= './apollo13.png' width="49%" height="49%"/>
 
-## Apollo 11 and Apollo 13 
+### However, the sentiment analysis is not particularly robust. The above example of Apollo 11 and Apollo 13 demonstrates the weaknesses of our analysis. As a successful space missions that landed humans on the moon, Apollo missions should be perceived generally positively, or at least neutral. However, in the above analysis, both events have negative sentiments. In addition, Apollo 11 is the first mission that landed humans on the moon, while Apollo 13 is unsuccessful due to oxygen tank malfunction, so we expect the sentiments towards these events to be different, yet they have the exact same average sentiment.
+
+### Specifically, the weaknesses come down to two points:   
+### 1. We cannot exclude the interfering effects between two events. In the case above, a space movie will have high similarity score for both topic "Apollo 11" and "Apollo 13". We tried to stopwords removal and lemmatization to reduce the number of features, yet 
+
+#### 2. The sentiment of the plots do not always reflect the perception of the events. A movie plot necessarily has hardships and challenges to make the story interesting. This, however, doesn't represent the overall perception of the event. A happy ending, summarized with a few sentences, will weigh less than the rest of the story. Many events, might be positive in nature, will be represented as negative. 
+
+## **Conclusion** 
