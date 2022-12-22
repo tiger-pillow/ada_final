@@ -5,7 +5,7 @@ a method for finding similarities between the films and events is required. Doc2
 
 ### explain how we got the events, and event summary
 
-The events used in the following analysis were taken from "https://www.historyonthenet.com/20th-century-timeline", where we hand-picked the most relevant ones. Since we would like the descriptions of the movies and the events to come from the same source, the event's corresponding Wikipedia description was used when finding similarities to the movie plot summaries.
+The events used in the following analysis were taken from "https://www.historyonthenet.com/20th-century-timeline", where the most relevant onces were hand-picked ones. Since we would like the descriptions of the movies and the events to come from the same source however, the event's corresponding Wikipedia description was used when finding similarities to the movie plot summaries.
 
 
 ### explain lemma and stop words
