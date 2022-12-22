@@ -77,13 +77,14 @@ Part 2:
 ### Our perceptions of past events change as time goes on. New research and reflections might shine light on events previously considered negative. By doing a sentiment analysis on the plots, we can see how events and concepts are viewed differently over time. Here, we can see that globally movie plots have been generally negative, and becoming slightly more negative over time. 
 
 ### A closer look at a historical events or key words reveal how their representations change in movies. 
-<img src= './berlin_wall.png' width="49%" height="49%" />
-<img src= './berlin_fall.png' width="49%" height="49%"  />
+<img src= './Berlin_combined.png'/>
 
-### When we select movie plots most relevant to <a href="https://en.wikipedia.org/wiki/Berlin_Wall">Berlin Wall (General)</a> and <a href="https://en.wikipedia.org/wiki/Fall_of_the_Berlin_Wall">Fall of Berlin Wall</a>, we see a difference in the perception of the two events. Although both events are perceived more positively over time, _the Fall Of Berlin Wall_ has a more positive sentiment score and higher slope, corresponding to the more postive perception of the event. 
+### When we select movie plots most similar (similarity score > 0.8) to <a href="https://en.wikipedia.org/wiki/Berlin_Wall">Berlin Wall (General)</a> and <a href="https://en.wikipedia.org/wiki/Fall_of_the_Berlin_Wall">Fall of Berlin Wall</a>, we see that the two events are perceived differently. Although both events are perceived as negative, _the Fall Of Berlin Wall_ has a more positive sentiment score and a faster increasing slope, corresponding to the more postive perception of the event in Western cultures. 
+
+<img src= './three_wars.png' width="150%" height="150%"/>
+
+### Here we compare the sentiments towards two wars with many similar characteristics. Both the _Korean War_ and the _Vietnam War_ started in the 1950s, with the United States combatting overseas in Asia against communist forces. Both wars ended with unsatisfactory results from the U.S. perspective. The Korean War ended with an armistice, and the Vietnam war ended with a U.S. defeat. It's reasonable that the two wars exhibit similar negative sentiments. This particularly obvious when compared to the Falklands War between Argentina and the U.K. in the 1980s, which also had <a href="https://en.wikipedia.org/wiki/Cultural_impact_of_the_Falklands_War">a cultural impact. </a> 
 
 <br><br>
 
-## berlin wall
-## Nelson Mandela and Vietnam War 
 ## Apollo 11 and Apollo 13 
