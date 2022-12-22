@@ -16,7 +16,5 @@ When vectorizing the movie summaries and event descriptions for comparison, it i
 
 
 
-
-
-![image](https://user-images.githubusercontent.com/47889649/209132199-77a2801e-1db1-4ac9-a39d-b8e27510ea9c.png)
-After events occured there the fraction of movies similar to events increased. The fractions are calculated by taking the number of similar movies before/after an event occured, divided by the total number of movies made before/after event occured
+![image](https://user-images.githubusercontent.com/47889649/209134052-0e6b4e64-c18a-4656-816a-41dc7ac8dd9d.png)
+After events occured there the fraction of total number of movies made, which were similar to events increased. The fractions are calculated by taking the number of similar movies before/after an event occured, divided by the total number of movies made before/after event occured
