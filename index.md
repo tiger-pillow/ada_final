@@ -50,7 +50,7 @@ André Aciman once said: "Film is a mirror of reality and it is a filter". Here,
 
 ## **From the perspective of plots, what can we learn about the impact of historical events on film?**
 
-### In order to understand the impact of historical events on movies, we first need to find out __what movies are relevant to which event?__ To do this, we compare the wikipedia summary of an event with all the movie plots and calculate a similarity score for each pair.Stopwords removal and lemmatization are applied to increase the effectiveness of similarity scores. 
+### In order to understand the impact of historical events on movies, we first need to find out __what movies are relevant to which event?__ To do this, we first curated a <a href="https://www.historyonthenet.com/20th-century-timeline">list of 25 important events </a>, excluding the ones before 1940 due to the lack of movie data. Then we compared the wikipedia summary of an event with all the movie plots and calculate a similarity score for each pair with Doc2Vec. Doc2Vec is an appropriate method for vectorizing an arbitrary-size document. The similarity score is calculated as the cosine between two documents in the vector space. Stopwords removal and lemmatization are applied to increase the effectiveness of similarity scores. 
 
 
 <img src='method_pic.png' width = "100%"/>
