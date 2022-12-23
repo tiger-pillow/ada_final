@@ -13,8 +13,8 @@ The first film ever made ---- "horse in motion" ---- was a 6-second black-and-wh
 </div>
 <div class="clearfix"></div>
 <img class="bottom" src="toystory.gif" height = "120" width = "160" style="margin-right:30px; float:left"  alt="">
-<div style="margin-top: 20px ; font-size: 20px;">
-André Aciman once said: "Film is a mirror of reality and it is a filter". Here, together, we will look at films through through the perspective of data science and answer the question: 
+<div style="font-size: 20px;">
+André Aciman once said: "Film is a mirror of reality and it is a filter". Here, together, we will look at films through the perspective of data science and answer the question: 
 </div>
 <br>
 
@@ -23,32 +23,23 @@ André Aciman once said: "Film is a mirror of reality and it is a filter". Here,
 
 {% include genre_plot_first.html %}
 
-<!-- TODO: some other aspects of the film other than this graph.  -->
-
-<!-- TODO: Plot either 2 subplots of the total number of films, or plot film length over time to illustrate the idea of "feature-length" -->
-<!-- Want to show the following things: 
-1. silent film 
-2. color film 
-3. length of the film 
-Three things influenced mostly by technology -->
-
 ## **From the metadata perspective, we found 4 big changes in the film industry:**
 <img src= './blackandwhite.png' width="40%" height="40%" style = "float: left; margin-right: 20px"/>
 
-### 1. The invention of Eastman Kodak color film in the 1950s broke the color film monopoly and lead to a decrease in black and white films after 1960s. 
+### 1. The invention of <a href="https://en.wikipedia.org/wiki/Color_motion_picture_film">Eastman Kodak color film </a> in the 1950s broke the color film monopoly and lead to a decrease in black and white films after 1960s. 
 <!-- TODO: CITATION Needed   -->
 
 <br><br><br>
 
 <img src= './silent.png' width="40%" height="40%" style = "float: right"/>
 
-### 2. The first sound movie _The Jazz Singer_ was premiered on October 6, 1927. Immediately after, the popularity of silent films dropped. 
+### 2. The first sound movie <a href="https://en.wikipedia.org/wiki/The_Jazz_Singer">_The Jazz Singer_</a> was premiered on October 6, 1927. Immediately after, the popularity of silent films dropped. 
 
 <br><br><br><br>
 
 <img src= './animated.png' width="40%" height="40%" style = "float: left; margin-right: 20px"/>
 
-### 3. In 1928, the first Disney Micky Mouse animation with synchronizezd sound was released and led to immediate success, thus opening the chapter for animated films. In 1995, the first digitally made animation _Toy Story_  was released by Pixar, leading to the 2nd increase of animated movies. 
+### 3. In 1928, the first Disney <a href="https://en.wikipedia.org/wiki/Mickey_Mouse"> Micky Mouse </a> animation with synchronizezd sound was released and led to immediate success, thus opening the chapter for animated films. In 1995, the first digitally made animation <a href="https://en.wikipedia.org/wiki/Toy_Story">_Toy Story_ </a> was released by Pixar, leading to the 2nd increase of animated movies. 
 
 <br>
 
@@ -56,22 +47,21 @@ Three things influenced mostly by technology -->
 
 ### 4. Nowadays, we are used to the idea of going to see "one movie". But did you know that many short films used to be presented together in theatres? Since 1888, average runtime has increased, and stablized around 100 minutes.Thus the term "feature-length", which refered to the promoted one.  As Hitchcock said "The length of a film should be directly related to the endurance of the human bladder". 
 
-<br><br><br>
 
-## **Historical Events, Similarity and Latency**
-<!-- TODO: a bit of methodology  -->
-Part 1: 
-1. doc2vec model
-2. explain how we got the events, and event summary
-3. explain lemma and stop words 
+## **From the perspective of plots, what can we learn about the impact of historical events on film?**
 
-### Now let's look at each individual event. To determine if an event has had an impact on the movie industry, we'll again use the similarity score to classify a movie as _similar_ to an event. We'll quantify this be asking the question: Is the fraction of similar movies larger in the dataset after than before the event?
+### In order to understand the impact of historical events on movies, we first need to find out __what movies are relevant to which event?__ To do this, we compare the wikipedia summary of an event with all the movie plots and calculate a similarity score for each pair.Stopwords removal and lemmatization are applied to increase the effectiveness of similarity scores. 
 
-### How can we examine this? Regression! We'll use the the **fraction of similar movies per year** (_F_ ) as response variable and use **year** (_Y_ ) and an indicator variable **is after** (_A_ ) as covaraiates. This yields the formula:
 
-<img src="https://latex.codecogs.com/svg.image?F&space;=&space;\alpha&space;&plus;&space;\beta_{1}Y&space;&plus;&space;\beta_{2}A&space;&plus;&space;\epsilon&space;" title="https://latex.codecogs.com/svg.image?F = \alpha + \beta_{1}Y + \beta_{2}A + \epsilon " />
+<img src='method_pic.png' width = "100%"/>
 
-### where alpha is a constant and epsilon is random noise. So why do we use the fraction of similar movies per year rather to the, perhaps more intuitive quanity, _similar movies per year_? We saw earlier that the number of movies produced each year has increased over time. This means we have to work with fractions instead of absolute quantities to capture this effect. The results from these regression models are found in the table below.
+
+### With the above method, we define a pair of similarity score > 0.8 as _similar_ or _relevant_ to an event. To see the impact of historical events on movies, we ask the following question **Is the fraction of similar movies larger in the dataset after than before the event?**
+
+### How can we examine this? Regression! We'll use the the **fraction of similar movies per year** (_F_) as response variable and use **year** (_Y_) and an indicator variable **is after** (_A_ ) as covaraiates. This yields the formula:
+<img src="https://latex.codecogs.com/svg.image?F&space;=&space;\alpha&space;&plus;&space;\beta_{1}Y&space;&plus;&space;\beta_{2}A&space;&plus;&space;\epsilon&space;" title="https://latex.codecogs.com/svg.image?F = \alpha + \beta_{1}Y + \beta_{2}A + \epsilon" class="center-img"/>
+
+### where __α__ is a constant and __ε__ is random noise. So why do we use the fraction of similar movies per year rather to the, perhaps more intuitive quanity, _similar movies per year_? We saw earlier that the number of movies produced each year has increased over time. This means we have to work with fractions instead of absolute quantities to capture this effect. The results from these regression models are found in the table below.
 
 
 | **Event**                                         | &alpha; | &beta;<sub>1</sub>              | &beta;<sub>2</sub>            | **Significant coefficients\***                   |
@@ -106,40 +96,40 @@ Part 1:
 
 ### We know, this is a lot of numbers to digest... But we can start with investigating the events which has three statistically significant coefficients, Pearl Harbour and Apollo 11.
 
-<img src= './reg_pearl_har.png' width="40%" height="40%"/>
-<img src= './reg_apollo11.png' width="40%" height="40%"/>
+<img src= './reg_pearl_har.png' width="49%" height="49%"/>
+<img src= './reg_apollo11.png' width="49%" height="49%"/>
 
-### These two plots looks about as different as two plots can look in this context. It seems like movies similar to the Pearl Harbour event where becoming less frequent before the event, then Pearl Harbour happened and this resulted in a lot more movies similar to Pearl Harbour. On the contrary, the Apollo 11 event seems to have made directors less inspired to make space- or adventure related movies. The coefficient, &beta;<sub>2</sub> is negative and it can clearly be seen in the plot. At the same time, the fraction of Apollo 11 movies is increasing with time. 
+### These two plots look about as different as two plots can look in this context. It seems like movies similar to the Pearl Harbour event where becoming less frequent before the event, then Pearl Harbour Attack happened, which resulted in more movies similar to Pearl Harbour. On the contrary, the Apollo 11 event seems to have made directors less inspired to make space- or adventure related movies. The coefficient, &beta;<sub>2</sub> is negative and it can clearly be seen in the plot. At the same time, the fraction of Apollo 11 movies is increasing with time. 
 
 ## 5 Key Take-Aways from this regression analysis
 
 *   ### **The fraction of war films is increasing**. In this list of important world event, there is (unfortunately) a lot of wars. What all of them have in common is a positive &beta;<sub>1</sub> coefficient which indicates that the fraction of movies similar to the event is increasing with time. Two examples are shown below.
 
-<img src= './reg_cold_war.png' width="30%" height="30%"/>
-<img src= './reg_nam_war.png' width="30%" height="30%"/>
-<img src= './reg_FL_war.png' width="30%" height="30%"/>
+<img src= './reg_cold_war.png' width="32%" height="32%"/>
+<img src= './reg_nam_war.png' width="32%" height="32%"/>
+<img src= './reg_FL_war.png' width="32%" height="32%"/>
 
-### Despite the fact that most of the &beta;<sub>2</sub>-coefficients for war related event isn't significant, it is still worth to mention that most of them point in the same direction. Immidiately after a war, there seems to be a decline in the production of these movies. This might be because the audience might be less receptive to war-related movies when it's close by.  <!-- How do I tab this paragraph to align with list?--> 
+### Despite the fact that most of the &beta;<sub>2</sub>-coefficients for war related events isn't significant, it is still worth to mention that most of them point in the same direction. Immidiately after a war, there seems to be a decline in the production of these movies. This might be because the audience might be less receptive to war-related movies when it's close by.  <!-- How do I tab this paragraph to align with list?--> 
 
 *   ### **Berlin Wall Contruction vs Demolition**. The opinion on the construction of a Berlin Wall was unanimous. It was terrible news, at least for East Berlin inhabitants. The demolition of the wall however, is remembered as one of the greatest parties in human history. Can we spot this in the data? 
 
-<img src= './reg_BW_C.png' width="40%" height="40%"/>
-<img src= './reg_BW_D.png' width="40%" height="40%"/>
+<img src= './reg_BW_C.png' width="49%" height="49%"/>
+<img src= './reg_BW_D.png' width="49%" height="49%"/>
 
 ### We see that movies similar to the construction of the wall saw a decrease immidiately after the event occured. While we see a sharp increase in movies which are similar to the demolition of the wall directly after the event. The misery of a Berlin Wall was not something movie producers wanted to feed to the contemporary audience. The demolition of the wall might have released a sense of new beginning and freedom which were keywords that movie producers embraced. Yet, the fraction of similar movies to the construction appears to increase with time while it decreases with time (or remains unchanged) for demolition-alike movies. Dark themes in movies might be more resitant to time after all. <!-- How do I tab this paragraph to align with list?--> 
 
 *   ### **(Attempted) Assasinations of American Presidents are always popular**. This very controversial initial sentence certainly needs an explanation. Among the real-world events included in this analysis we find the assasination of President John F. Kennedy and the attempted assasination of President Ronald Reagan. The regression models for these two events have the same shape, the fraction of similar movies to these events are always increasing, that is &beta;<sub>1</sub> and &beta;<sub>2</sub> are positive.
 
-<img src= './reg_kennedy.png' width="40%" height="40%"/>
-<img src= './reg_reagan.png' width="40%" height="40%"/>
+<img src= './reg_kennedy.png' width="49%" height="49%"/>
+<img src= './reg_reagan.png' width="49%" height="49%"/>
 
 ### This might have something to do with the intensity of the event. What separates these events from for example wars are that an assasination happens in one day, while a war can be long, protracted and slow. There might something with the intensity of the event, that everything happens at the same time, that makes it irresitable for movie producers to not write something about it. <!-- How do I tab this paragraph to align with list?--> 
 
 *   ### **Space events don't live up to the hype**. The event dataset contains three space-related events, The Apollo 11 and 13 missions and the launch of Sputnik 2. The pattern we see among these events are that there is a clear upward trend over time but they all have a negative &beta;<sub>2</sub>-coefficient. The fraction of similar movies decreases immidiately after the event.
 
-<img src= './reg_apollo11.png' width="30%" height="30%"/>
-<img src= './reg_apollo13.png' width="30%" height="30%"/>
-<img src= './reg_sputnik2.png' width="30%" height="30%"/>
+<img src= './reg_apollo11.png' width="32%" height="32%"/>
+<img src= './reg_apollo13.png' width="32%" height="32%"/>
+<img src= './reg_sputnik2.png' width="32%" height="32%"/>
 
 ### Write something more
 
@@ -195,9 +185,9 @@ Part 1:
 ### However, our sentiment analysis is not particularly robust. The above example of Apollo 11 and Apollo 13 demonstrates the weaknesses of our analysis. As successful space missions that landed humans on the moon, Apollo missions should be perceived generally positively, or at least neutral. However, in the above analysis, both events have negative sentiments. In addition, Apollo 11 is the first mission that landed humans on the moon, while Apollo 13 is unsuccessful due to oxygen tank malfunction, so we expect the sentiments towards these events to be different, yet they have the exact same average sentiment.
 
 ### Specifically, the weaknesses come down to two points:   
-### 1. Our method cannot exclude the interfering effects between two events. In the case above, a space movie will have high similarity score for both topic "Apollo 11" and "Apollo 13". We tried to stopwords removal and lemmatization to reduce the number of features, yet the model cannot distinguish the events at a nuanced level. 
+### 1. **Our method cannot exclude the interfering effects between two events.** In the case above, a space movie will have high similarity score for both topic "Apollo 11" and "Apollo 13". We tried to stopwords removal and lemmatization to reduce the number of features, yet the model cannot distinguish the events at a nuanced level. 
 
-### 2. The sentiment of the plots do not always reflect the perception of the events. A movie needs hardships and challenges to make the story interesting. This, however, doesn't represent the overall perception of the event. A happy ending, summarized with a few sentences, will weigh less than the rest of the story. Many events, such as the Apollo missions, might be positive in nature, will be represented as negative. 
+### 2. **The sentiment of the plots do not always reflect the perception of the events.** A movie needs hardships and challenges to make the story interesting. This, however, doesn't represent the overall perception of the event. A happy ending, summarized with a few sentences, will weigh less than the rest of the story. Many events, such as the Apollo missions, might be positive in nature, will be represented as negative. 
 
 ## **Conclusion** 
 To be done
