@@ -101,7 +101,7 @@ André Aciman once said: "Film is a mirror of reality and it is a filter". Here,
 
 ### These two plots look about as different as two plots can look in this context. It seems like movies similar to the Pearl Harbour event where becoming less frequent before the event, then Pearl Harbour Attack happened, which resulted in more movies similar to Pearl Harbour. On the contrary, the Apollo 11 event seems to have made directors less inspired to make space- or adventure related movies. The coefficient, &beta;<sub>2</sub> is negative and it can clearly be seen in the plot. At the same time, the fraction of Apollo 11 movies is increasing with time. 
 
-## 5 Key Take-Aways from this regression analysis
+## 4 Key Take-Aways from this regression analysis
 
 *   ### **The fraction of war films is increasing**. In this list of important world event, there is (unfortunately) a lot of wars. What all of them have in common is a positive &beta;<sub>1</sub> coefficient which indicates that the fraction of movies similar to the event is increasing with time. Two examples are shown below.
 
@@ -125,7 +125,7 @@ André Aciman once said: "Film is a mirror of reality and it is a filter". Here,
 
 ### This might have something to do with the intensity of the event. What separates these events from for example wars are that an assasination happens in one day, while a war can be long, protracted and slow. There might something with the intensity of the event, that everything happens at the same time, that makes it irresitable for movie producers to not write something about it. <!-- How do I tab this paragraph to align with list?--> 
 
-*   ### **Space events don't live up to the hype**. The event dataset contains three space-related events, The Apollo 11 and 13 missions and the launch of Sputnik 2. The pattern we see among these events are that there is a clear upward trend over time but they all have a negative &beta;<sub>2</sub>-coefficient. The fraction of similar movies decreases immidiately after the event.
+*   ### **Space events don't live up to the hype**. The event dataset contains three space-related events, The Apollo 11 and 13 missions and the launch of Sputnik 2. The pattern we see among these events are that there is a clear upward trend over time but they all have a negative &beta;<sub>2</sub>-coefficient. The fraction of similar movies decreases immidiately after the event. In a long-term perspective however, space-related movies appears to increase in popularity.
 
 <img src= './reg_apollo11.png' width="32%" height="32%"/>
 <img src= './reg_apollo13.png' width="32%" height="32%"/>
