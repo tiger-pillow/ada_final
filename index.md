@@ -56,12 +56,12 @@ André Aciman once said: "Film is a mirror of reality and it is a filter". Here,
 <img src='method_pic.png' width = "100%"/>
 
 
-### With the above method, we define a pair of similarity score > 0.8 as _similar_ or _relevant_ to an event. To see the impact of historical events on movies, we ask the following question **Is the fraction of similar movies larger in the dataset after than before the event?**
+### With the above method, we define a pair of similarity score > 0.8 as _similar_ or _relevant_ to an event. To see the impact of historical events on movies, we ask the following question: **Is the fraction of similar movies larger in the dataset after than before the event?**
 
-### How can we examine this? Regression! We'll use the the **fraction of similar movies per year** (_F_) as response variable and use **year** (_Y_) and an indicator variable **is after** (_A_ ) as covaraiates. This yields the formula:
+### How can we examine this? Regression! We'll use the **fraction of similar movies per year** (_F_) as response variable while **year** (_Y_) and an indicator variable **is after** (_A_ ) will be used as covaraiates. This yields the formula:
 <img src="https://latex.codecogs.com/svg.image?F&space;=&space;\alpha&space;&plus;&space;\beta_{1}Y&space;&plus;&space;\beta_{2}A&space;&plus;&space;\epsilon&space;" title="https://latex.codecogs.com/svg.image?F = \alpha + \beta_{1}Y + \beta_{2}A + \epsilon" class="center-img"/>
 
-### where __α__ is a constant and __ε__ is random noise. So why do we use the fraction of similar movies per year rather to the, perhaps more intuitive quanity, _similar movies per year_? We saw earlier that the number of movies produced each year has increased over time. This means we have to work with fractions instead of absolute quantities to capture this effect. The results from these regression models are found in the table below.
+### where __α__ is a constant and __ε__ is random noise. So why do we use the fraction of similar movies per year rather to the, perhaps more intuitive quanity, _similar movies per year_? We saw earlier that the number of movies produced each year has increased over time. This means we have to work with fractions instead of absolute quantities to compensate this effect. The results from these regression models are found in the table below.
 
 
 | **Event**                                         | &alpha; | &beta;<sub>1</sub>              | &beta;<sub>2</sub>            | **Significant coefficients\***                   |
@@ -99,7 +99,7 @@ André Aciman once said: "Film is a mirror of reality and it is a filter". Here,
 <img src= './reg_pearl_har.png' width="49%" height="49%"/>
 <img src= './reg_apollo11.png' width="49%" height="49%"/>
 
-### These two plots look about as different as two plots can look in this context. It seems like movies similar to the Pearl Harbour event where becoming less frequent before the event, then Pearl Harbour Attack happened, which resulted in more movies similar to Pearl Harbour. On the contrary, the Apollo 11 event seems to have made directors less inspired to make space- or adventure related movies. The coefficient, &beta;<sub>2</sub> is negative and it can clearly be seen in the plot. At the same time, the fraction of Apollo 11 movies is increasing with time. 
+### These two plots look about as different as two plots can look in this context. It seems like movies similar to the Pearl Harbour event where becoming less frequent before the event, then Pearl Harbour Attack happened, which resulted in more movies similar to Pearl Harbour. On the contrary, the Apollo 11 event seems to have made directors less inspired to make space or adventure related movies. The coefficient, &beta;<sub>2</sub> is negative and it can clearly be seen in the plot. At the same time, the fraction of Apollo 11 movies is increasing with time. 
 
 ## 4 Key Take-Aways from this regression analysis
 
@@ -109,7 +109,7 @@ André Aciman once said: "Film is a mirror of reality and it is a filter". Here,
 <img src= './reg_nam_war.png' width="32%" height="32%"/>
 <img src= './reg_FL_war.png' width="32%" height="32%"/>
 
-### Despite the fact that most of the &beta;<sub>2</sub>-coefficients for war related events isn't significant, it is still worth to mention that most of them point in the same direction. Immidiately after a war, there seems to be a decline in the production of these movies. This might be because the audience might be less receptive to war-related movies when it's close by.  <!-- How do I tab this paragraph to align with list?--> 
+### Despite the fact that most of the &beta;<sub>2</sub>-coefficients for war-related events aren't significant, it is still worth to mention that most of them point in the same direction. Immidiately after a war, there seems to be a decline in the production of these movies. This might be because the audience might be less receptive to war-related movies when it's close by.  <!-- How do I tab this paragraph to align with list?--> 
 
 *   ### **Berlin Wall Contruction vs Demolition**. The opinion on the construction of a Berlin Wall was unanimous. It was terrible news, at least for East Berlin inhabitants. The demolition of the wall however, is remembered as one of the greatest parties in human history. Can we spot this in the data? 
 
@@ -188,7 +188,7 @@ André Aciman once said: "Film is a mirror of reality and it is a filter". Here,
 
 ### To conclude the question of how technology and historical events have affected the film industry, we have investigated three aspects in depth: how the movie metadata has changed throughout time, how historical events have impacted films and how historical events and concepts are differently perceived through history.
 
-### For metadata investigation, we found that the invention of movies with sound and color decreased the popularity of its predecessor, silent and black and white film. Likewise, the first synchronized sound and animation film, as well as the first digitally created animation film, led to two significant increases in animated movie popularity. The average runtime movie has also increased and stabilized by around 100 minutes because of the shift from seeing many short films in one watch to only seeing one long movie. 
+### For metadata investigation, we found that the invention of movies with sound and color decreased the popularity of its predecessor, silent and black-and-white film. Likewise, the first synchronized sound and animation film, as well as the first digitally created animation film, led to two significant increases in animated movie popularity. The average runtime movie has also increased and stabilized by around 100 minutes because of the shift from seeing many short films in one watch to only seeing one long movie. 
 
 ### Different historical events have affected the sequential movie industry. Using regression analysis, it was discovered that two events had significance in all three regression coefficients: Apollo 13 and Pearl Harbor. While the attack of Pearl Harbor led to an increase in similar movies, the Apollo 13 mission, as well as Apollo 11, decreased the popularity of space-like movies. Furthermore, war movies show a slight decrease in popularity, followed by an increase over time after wars like the Vietnam War, the Cold war, and the Falkland Islands War. Movies similar to the Construction of the Berlin wall follow a similar trend pattern. On the contrary, the Fall of The Berlin Wall only resulted in a momentary rise in popularity immediately after the event. Lastly, assassination events, like the ones with President Kennedy and Regan, led to a noticeable increase in movies with similar plots after those events. The increase is likely due to the intensity of the events.
 
