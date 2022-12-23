@@ -131,11 +131,6 @@ André Aciman once said: "Film is a mirror of reality and it is a filter". Here,
 <img src= './reg_apollo13.png' width="32%" height="32%"/>
 <img src= './reg_sputnik2.png' width="32%" height="32%"/>
 
-### Write something more
-
-*   ### **You know all those movies about political reforms?**. Write about Marshall Plan, Civil Rights Act, Board vs Brown
-
-
 ## When is the peak of movies after an influential event?
 ### Now we ask ourselves how *long* does it take for an event to reach its peak influence of the movie industry. We therefore define *latency* to be the first year after the event where the similarity fraction of that year is greater than the largest year before the event. The latency is not defined if no such year exist. Latency should serve as a simple and interpretable metric for defining time to peak influence. 
 
