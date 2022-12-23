@@ -134,30 +134,29 @@ André Aciman once said: "Film is a mirror of reality and it is a filter". Here,
 ## When is the peak of movies after an influential event?
 ### Now we ask ourselves how *long* does it take for an event to reach its peak influence of the movie industry. We therefore define *latency* to be the first year after the event where the similarity fraction of that year is greater than the largest year before the event. The latency is not defined if no such year exist. Latency should serve as a simple and interpretable metric for defining time to peak influence. 
 
-### We find that the latency is defined for 18 out of 23 events (see table below). The average latency is 9.5 years and the median 9 years. The events *The Civil Rights Act* and *The Cold War Begins* have latencies well above all other with 43 and 60 years, respectively (these were removed from the average and median calculation). Although it's difficult to know for sure since we have limited data, it could be the case that some events take hold and creates an up-swing of movies several decades later.
+### We find that the latency is defined for 16 out of 23 events (see table below). The average latency is 16.2 years and the median 16 years. Although it's difficult to know for sure since we have limited data, but it looks like the results can be charactericed by two distinct groups. The first where the movie industry is quickly influenced by the event (the first events with latencies between 1-4 years), and the second where it ranges from 13-44 years.
 
 |                                                            |   latency |
 |:-----------------------------------------------------------|----------:|
 | Pearl Harbor                                               |         1 |
 | Atomic Bombing Of Hiroshima And Nagasaki                   |         2 |
 | The Truman Doctrine Is Announced                           |         2 |
-| The Cold War begins                                        |         3 |
 | The Marshall Plan Is Implemented To Assist Post-War Europe |         3 |
-| The Korean War                                             |         5 |
-| Brown v. Board of Education of Topeka                      |         6 |
-| The Warsaw Pact Is Signed                                  |         8 |
-| The Hungarian Revolution Starts                            |         9 |
-| Sputnik Is Launched                                        |        10 |
-| Construction Begins On The Berlin Wall                     |        13 |
-| President Kennedy Is Assassinated                          |        13 |
-| Civil Rights Act Is Passed                                 |        13 |
-| Apollo 11                                                  |        14 |
-| Apollo 13                                                  |        14 |
-| The Iranian Revolution Happens                             |        14 |
-| John Hinckley Jr Attempts To Assassinate Reagan            |        16 |
-| The Berlin Wall Falls                                      |        16 |
-| Nelson Mandela Is Released From Prison                     |        43 |
-| Apartheid Ends                                             |        60 |
+| The Korean War                                             |         4 |
+| Brown v. Board of Education of Topeka                      |         4 |
+| The Warsaw Pact Is Signed                                  |        13 |
+| Sputnik Is Launched                                        |        16 |
+| China Begins The Great Leap Forward                        |        16 |
+| President Kennedy Is Assassinated                          |        16 |
+| Civil Rights Act Is Passed                                 |        16 |
+| Apollo 13                                                  |        17 |
+| The Iranian Revolution Happens                             |        22 |
+| John Hinckley Jr Attempts To Assassinate Reagan            |        23 |
+| The War In The Falkland Islands Begins                     |        25 |
+| The Berlin Wall Falls                                      |        28 |
+| Nelson Mandela Is Released From Prison                     |        40 |
+| Apartheid Ends                                             |        44 |
+
 
 ## **How are historical events and concepts perceived through movies ?**
 
