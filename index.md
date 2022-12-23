@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Movie Through the Decades
-description: a peek into how technology and historical events change the film industry
+title: Movies Through the Decades
+description: A peek into how technology and historical events change the film industry
 htmlwidgets: TRUE
 ---
 
@@ -39,7 +39,7 @@ André Aciman once said: "Film is a mirror of reality and it is a filter". Here,
 
 <img src= './animated.png' width="40%" height="40%" style = "float: left; margin-right: 20px"/>
 
-### 3. In 1928, the first Disney <a href="https://en.wikipedia.org/wiki/Mickey_Mouse"> Micky Mouse </a> animation with synchronizezd sound was released and led to immediate success, thus opening the chapter for animated films. In 1995, the first digitally made animation <a href="https://en.wikipedia.org/wiki/Toy_Story">_Toy Story_ </a> was released by Pixar, leading to the 2nd increase of animated movies. 
+### 3. In 1928, the first Disney <a href="https://en.wikipedia.org/wiki/Mickey_Mouse"> Micky Mouse </a> animation with synchronized sound was released and led to immediate success, thus opening the chapter for animated films. In 1995, the first digitally made animation <a href="https://en.wikipedia.org/wiki/Toy_Story">_Toy Story_ </a> was released by Pixar, leading to the 2nd increase of animated movies. 
 
 <br>
 
@@ -50,7 +50,7 @@ André Aciman once said: "Film is a mirror of reality and it is a filter". Here,
 
 ## **From the perspective of plots, what can we learn about the impact of historical events on film?**
 
-### In order to understand the impact of historical events on movies, we first need to find out __what movies are relevant to which event?__ To do this, we first curated a <a href="https://www.historyonthenet.com/20th-century-timeline">list of 25 important events </a>, excluding the ones before 1940 due to the lack of movie data. Then we compared the wikipedia summary of an event with all the movie plots and calculate a similarity score for each pair with Doc2Vec. Doc2Vec is an appropriate method for vectorizing an arbitrary-size document. The similarity score is calculated as the cosine between two documents in the vector space. Stopwords removal and lemmatization are applied to increase the effectiveness of similarity scores. 
+### In order to understand the impact of historical events on movies, we first need to find out __what movies are relevant to which event?__ To do this, we compare the wikipedia summary of an event with all the movie plots and calculate a similarity score for each pair. To increase the effectiveness of the model we use the following preprocessing techniques: stopwords removal, lemmatization, and removal of frequently occuring words in the corpus.
 
 
 <img src='method_pic.png' width = "100%"/>
@@ -136,7 +136,7 @@ André Aciman once said: "Film is a mirror of reality and it is a filter". Here,
 *   ### **You know all those movies about political reforms?**. Write about Marshall Plan, Civil Rights Act, Board vs Brown
 
 
-## Latency 
+## When is the peak of movies after an influential event?
 ### Now we ask ourselves how *long* does it take for an event to reach its peak influence of the movie industry. We therefore define *latency* to be the first year after the event where the similarity fraction of that year is greater than the largest year before the event. The latency is not defined if no such year exist. Latency should serve as a simple and interpretable metric for defining time to peak influence. 
 
 ### We find that the latency is defined for 18 out of 23 events (see table below). The average latency is 9.5 years and the median 9 years. The events *The Civil Rights Act* and *The Cold War Begins* have latencies well above all other with 43 and 60 years, respectively (these were removed from the average and median calculation). Although it's difficult to know for sure since we have limited data, it could be the case that some events take hold and creates an up-swing of movies several decades later.
