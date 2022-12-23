@@ -145,14 +145,11 @@ Part 1:
 
 *   ### **You know all those movies about political reforms?**. Write about Marshall Plan, Civil Rights Act, Board vs Brown
 
-Since we seen that most events have an impact on the movie industry, a natural follow-up question is how *long* does it take for 
-an event to reach its peak influence of the movie industry. We therefore define *latency* by the first year after the event where the 
-similarity fraction of that year is greater than the largest year before the event. The latency is not defined if no such year exist.
-Latency should serve as a simple and interpretable metric for defining time to peak influence. 
 
-We find that the latency is defined for 18 out of 23 events. The average latency is 9.5 years and the median 9 years. The events *The Civil Rights Act* 
-and *The Cold War Begins* have latencies well above all other with 43 and 60 years, respectively (these were removed from the average and median calculation). Although it's difficult to know for sure since we
-have limited data, it could be the case that some events take hold and creates an up-swing of movies several decades later.
+## Latency 
+### Now we ask ourselves how *long* does it take for an event to reach its peak influence of the movie industry. We therefore define *latency* to be the first year after the event where the similarity fraction of that year is greater than the largest year before the event. The latency is not defined if no such year exist. Latency should serve as a simple and interpretable metric for defining time to peak influence. 
+
+### We find that the latency is defined for 18 out of 23 events (see table below). The average latency is 9.5 years and the median 9 years. The events *The Civil Rights Act* and *The Cold War Begins* have latencies well above all other with 43 and 60 years, respectively (these were removed from the average and median calculation). Although it's difficult to know for sure since we have limited data, it could be the case that some events take hold and creates an up-swing of movies several decades later.
 
 |                                                            |   latency |
 |:-----------------------------------------------------------|----------:|
